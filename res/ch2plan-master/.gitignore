@@ -1,0 +1,8 @@
+*.log
+/dist
+/build
+/.terraform
+/game
+/node_modules
+/elm-stuff
+/assets/elm.js

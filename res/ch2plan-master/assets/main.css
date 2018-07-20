@@ -1,0 +1,80 @@
+body {
+  /* background-image: url("./ch2data/img/starBG.png"); */
+  background: #080010;
+  color: #fff;
+  max-width: 1000px;
+}
+svg {
+  background: url("./ch2data/img/starBG.png");
+}
+svg .edge {
+  stroke: #aaa;
+  stroke-width: 4;
+}
+svg .node {
+  stroke: #aaa;
+  stroke-width: 1;
+  fill: #ddd;
+}
+svg .node .overlay {
+  opacity: 0;
+}
+svg .node-Plain.overlay {
+  opacity: 0;
+}
+svg .node-Notable .overlay {
+  opacity: 0.1;
+  fill: yellow;
+}
+svg .node-Keystone .overlay {
+  opacity: 0.2;
+  fill: teal;
+}
+svg .node-selectable .overlay {
+  opacity: 0.3;
+  stroke: pink;
+  stroke-width: 5;
+  fill: purple;
+}
+svg .node-selected .overlay {
+  opacity: 0.3;
+  stroke: lightgreen;
+  stroke-width: 5;
+  fill: green;
+}
+svg .node-highlight .overlay {
+  opacity: 0.3;
+  fill: orange;
+}
+
+.summary .icon {
+  float: left;
+  position: relative;
+}
+.summary .icon img {
+  width: 1em;
+  height: 1em;
+}
+.summary .icon .overlay {
+  position: absolute;
+  top:0;left:0;
+  width: 1em;
+  height: 1em;
+}
+.summary .icon.node-Keystone .overlay {
+  opacity: 0.4;
+  background-color: teal;
+}
+.summary .icon.node-Notable .overlay {
+  opacity: 0.2;
+  background-color: yellow;
+}
+.summary .clear {
+  clear: left;
+}
+.summary ul {
+  list-style-type: none;
+}
+.summary li {
+  margin: 0.2em;
+}
