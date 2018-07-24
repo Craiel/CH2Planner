@@ -89,7 +89,7 @@ Planner.createSkillNode = (function(){
         // - change the background color / image based on isLearned
         // - notify the Planner compute engine to recompute states / skills etc
         if(this.isLearned){
-            this.cyNode.css("background-color", "orange");
+            this.cyNode.css("background-color", "#feff85");
         } else {
             this.cyNode.css("background-color", "grey");
         }
@@ -100,10 +100,20 @@ Planner.createSkillNode = (function(){
 
         for (let i = 0, len = edges.length; i < len; i++) {
             let edge = edges[i];
-            if (this.edgeHasActiveNode(edge)){
-                edge.addClass('active');
-            } else {
-                edge.removeClass('active');
+            if (this.edgeHasActiveNode(edge)) {
+                let bothSidesActive = this.edgeHasActiveNode(edge);
+
+                if (bothSidesActive) {
+                    edge.addClass('active');
+                } else {
+                    edge.removeClass('active');
+                }
+
+                if (this.isLearned === true && bothSidesActive === false) {
+                    edge.addClass('canActivate');
+                } else {
+                    edge.removeClass('canActivate');
+                }
             }
         }
     };

@@ -59,7 +59,14 @@ Planner.skillTreeStyle = [
     {
         selector: 'edge.active',
         style: {
-            "line-color": "red",
+            "line-color": "#feff85",
+            "opacity": "0.9"
+        }
+    },
+    {
+        selector: 'edge.canActivate',
+        style: {
+            "line-color": "#8588ff",
             "opacity": "0.9"
         }
     }
