@@ -113,7 +113,7 @@ Planner.createSkillNode = (function(){
 
         for (let i = 0, len = nodes.length; i < len; i++) {
             let nodeId = nodes[i].data('id');
-            if(Planner.nodes[nodeId].isLearned === true) {
+            if(Planner.skillTree.isLearned(nodeId) === true) {
                 return true;
             }
         }
